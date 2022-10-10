@@ -1,0 +1,24 @@
+<div class="to-do-list">
+  <div class="form-group">
+    <input
+      type="text"
+      (change)="setTarefaTitle($event)"
+      [value]="tituloTarefa"
+    />
+    <button (click)="addTarefaToList()" class="btn">Adicionar</button>
+  </div>
+
+  <div *ngIf="todos.length === 0">Não possui tarefa cadastrada.</div>
+  <ul>
+    <li
+      *ngFor="let todo of todos"
+      [ngClass]="{
+        verde: todos.length === 1,
+        amarelo: todos.length === 2,
+        vermelho: todos.length > 2
+      }"
+    >
+      {{ todo }}
+    </li>
+  </ul>
+</div>

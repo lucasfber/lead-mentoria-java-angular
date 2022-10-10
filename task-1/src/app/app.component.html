@@ -1,0 +1,11 @@
+<div class="container">
+  <app-counter
+    [initialValue]="initialValue"
+    (valueChanged)="showAlert($event)"
+  ></app-counter>
+
+  <app-to-do-list
+    [initialTodoList]="initialTodoList"
+    (fullList)="showFullListAlert($event)"
+  ></app-to-do-list>
+</div>

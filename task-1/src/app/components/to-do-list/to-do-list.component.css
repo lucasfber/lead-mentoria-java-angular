@@ -1,0 +1,22 @@
+.verde {
+  color: green;
+}
+
+.amarelo {
+  color: yellow;
+}
+
+.vermelho {
+  color: red;
+}
+
+.form-group {
+  display: flex;
+}
+input {
+  flex: 1;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
