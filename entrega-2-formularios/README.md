@@ -1,5 +1,7 @@
 # Entrega2Formularios
 
+![Demo](https://raw.githubusercontent.com/lucasfber/lead-mentoria-java-angular/main/demo-formularios.gif)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
 
 ## Development server
