@@ -1,0 +1,47 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="mt-5">
+  <p class="text-center lead">Register a new movie</p>
+  <div class="mt-4">
+    <label for="title" class="form-label">Title:</label>
+    <input
+      type="text"
+      id="title"
+      class="form-control"
+      formControlName="title"
+    />
+    <div class="form-text text-danger" *ngIf="isInvalidInput('title')">
+      {{ getError("title") }}
+    </div>
+  </div>
+  <div class="mt-4">
+    <label for="genre" class="form-label">Genre:</label>
+    <select id="genre" formControlName="genre" class="form-select">
+      <option *ngFor="let genre of genres" [value]="genre">{{ genre }}</option>
+    </select>
+    <div class="form-text text-danger" *ngIf="isInvalidInput('genre')">
+      {{ getError("genre") }}
+    </div>
+  </div>
+  <div class="mt-4">
+    <label for="releaseDate" class="form-label">Release date:</label>
+    <input
+      type="text"
+      id="releaseDate"
+      formControlName="releaseDate"
+      [specialCharacters]="['/']"
+      mask="00/00/0000"
+      class="form-select"
+    />
+    <div class="form-text text-danger" *ngIf="isInvalidInput('releaseDate')">
+      {{ getError("releaseDate") }}
+    </div>
+  </div>
+  <div class="mt-4">
+    <button
+      class="btn btn-primary"
+      type="submit"
+      [disabled]="registerForm.invalid"
+    >
+      Register
+    </button>
+  </div>
+</form>

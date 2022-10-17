@@ -1,0 +1,6 @@
+<div class="container">
+  <app-register-movie-form
+    (onRegisterMovie)="onRegisterMovie($event)"
+  ></app-register-movie-form>
+  <app-movies-table [moviesList]="moviesList"></app-movies-table>
+</div>
